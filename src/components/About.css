@@ -77,6 +77,17 @@
   transform: translateX(4px);
 }
 
+.about-inline-link {
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(192, 39, 45, 0.3);
+  transition: border-color 0.25s ease;
+}
+
+.about-inline-link:hover {
+  border-bottom-color: var(--red);
+}
+
 /* Education */
 .about-education {
   border-left: 1px solid rgba(192, 39, 45, 0.25);

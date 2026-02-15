@@ -31,6 +31,7 @@
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 3.5rem;
   list-style: none;
 }
@@ -66,6 +67,26 @@
   width: 100%;
 }
 
+.nav-switch {
+  all: unset;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--red);
+  border-radius: 100px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav-switch:hover {
+  background: var(--red);
+  color: var(--beige);
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 1.25rem 5vw;
@@ -77,5 +98,11 @@
 
   .nav-links a {
     font-size: 0.65rem;
+  }
+
+  .nav-switch {
+    font-size: 0.6rem !important;
+    padding: 0.3rem 0.7rem !important;
+    letter-spacing: 0.15em !important;
   }
 }

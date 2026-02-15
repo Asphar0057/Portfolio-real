@@ -9,6 +9,13 @@
   --white: #FAFAF8;
 }
 
+.dark-theme {
+  --beige: #0e0a0b;
+  --beige-dark: #1a1214;
+  --black: #f6e9d2;
+  --white: #12090A;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;

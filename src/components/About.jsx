@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import './About.css'
 
-const bio = [
+const BIO_PARAGRAPHS = [
   `I'm Parthav Elangovan, a Computer Science graduate from the University of Texas at Dallas
    (Major Honors with Distinction, December 2025), now pursuing my Master's at UMass Amherst.
    My lifelong passion for creative design began early: I spent countless hours building personal
@@ -10,9 +11,6 @@ const bio = [
    compelling visual narratives. That journey naturally expanded into web development, where I
    discovered how to fuse creative expertise with technical depth by building digital experiences
    where art direction and engineering speak the same language.`,
-
-  `Today I bridge the gap between stunning visual design and robust technical implementation,
-   bringing a perspective where form meets function in perfect harmony.`,
 ]
 
 const education = [
@@ -84,9 +82,15 @@ export default function About() {
       {/* Bio + Education */}
       <div className="about-body">
         <div className="about-bio">
-          {bio.map((p, i) => (
+          {BIO_PARAGRAPHS.map((p, i) => (
             <p key={i} className="about-para">{p}</p>
           ))}
+          <p className="about-para">
+            Today I bridge the gap between stunning visual design and robust technical
+            implementation. Beyond design, I'm deeply passionate about computer science
+            and currently pursuing my Master's — you can explore that side of my work in
+            my <Link to="/cs" className="about-inline-link">coding portfolio</Link>.
+          </p>
           <a href="#contact" className="about-cta">
             Let's build something
           </a>

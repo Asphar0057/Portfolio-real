@@ -1,0 +1,252 @@
+/* ── Dark theme — NO RED, beige/white only ────────────── */
+
+/* Hero — no portrait, centered text */
+.cs-hero {
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-hero-content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 0 !important;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cs-hero .hero-names {
+  align-items: center;
+}
+
+.cs-name {
+  color: #f6e9d2 !important;
+}
+
+.cs-hero .hero-role-sep {
+  color: #f6e9d2 !important;
+}
+
+.cs-hero .hero-scroll {
+  color: #f6e9d2;
+  opacity: 0.3;
+}
+
+.cs-hero .hero-scroll:hover {
+  opacity: 0.65;
+}
+
+.cs-hero .hero-scroll-line {
+  background: #f6e9d2;
+  width: 1px;
+  height: 4rem;
+  display: block;
+  animation: scrollDrop 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollDrop {
+  0%   { transform: scaleY(0); transform-origin: top;    opacity: 1; }
+  49%  { transform: scaleY(1); transform-origin: top;    opacity: 1; }
+  50%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+/* Dot grid — lighter for dark bg */
+.dark-theme .hero::before {
+  background-image: radial-gradient(circle, #f6e9d2 1px, transparent 1px);
+  opacity: 0.06;
+}
+
+/* ── Navbar — dark frosted glass ─────────────────────── */
+.cs-navbar .nav-links a {
+  color: #f6e9d2;
+}
+
+.cs-navbar .nav-links a:hover {
+  color: rgba(246, 233, 210, 0.6);
+}
+
+.cs-navbar .nav-links a::after {
+  background: #f6e9d2;
+}
+
+.cs-navbar.scrolled {
+  background: rgba(14, 10, 11, 0.92);
+  border-bottom-color: rgba(246, 233, 210, 0.08);
+}
+
+/* Switch link */
+.cs-navbar .nav-switch {
+  color: #f6e9d2;
+  border-color: rgba(246, 233, 210, 0.3);
+}
+
+.cs-navbar .nav-switch:hover {
+  background: #f6e9d2;
+  color: #0e0a0b;
+}
+
+/* ── About section — all beige/white ──────────────────── */
+.dark-theme .section-label {
+  color: #C0272D;
+}
+
+.dark-theme .about-heading {
+  color: #f6e9d2;
+}
+
+.dark-theme .about-heading em {
+  color: #C0272D;
+  font-style: italic;
+}
+
+.dark-theme .about-para {
+  color: rgba(246, 233, 210, 0.55);
+}
+
+.dark-theme .about-cta {
+  color: #f6e9d2;
+  border-bottom-color: rgba(246, 233, 210, 0.3);
+}
+
+.dark-theme .about-cta:hover {
+  color: #C0272D;
+  border-bottom-color: #C0272D;
+}
+
+.dark-theme .about-inline-link {
+  color: #C0272D;
+  border-bottom-color: rgba(192, 39, 45, 0.3);
+}
+
+.dark-theme .about-inline-link:hover {
+  border-bottom-color: #C0272D;
+}
+
+.dark-theme .about-education {
+  border-left-color: rgba(246, 233, 210, 0.12);
+}
+
+.dark-theme .edu-eyebrow {
+  color: #C0272D;
+}
+
+.dark-theme .edu-degree {
+  color: #f6e9d2;
+}
+
+.dark-theme .edu-school {
+  color: rgba(246, 233, 210, 0.45);
+}
+
+.dark-theme .edu-honors {
+  color: rgba(246, 233, 210, 0.5);
+}
+
+.dark-theme .edu-status {
+  color: rgba(246, 233, 210, 0.3);
+}
+
+.dark-theme .edu-status.active {
+  color: #C0272D;
+}
+
+.dark-theme .edu-item {
+  border-bottom-color: rgba(246, 233, 210, 0.06);
+}
+
+/* Skills */
+.dark-theme .skills-section {
+  border-top-color: rgba(246, 233, 210, 0.08);
+}
+
+.dark-theme .skill-card {
+  border-color: rgba(246, 233, 210, 0.06);
+}
+
+.dark-theme .skill-card:hover {
+  border-color: rgba(246, 233, 210, 0.18);
+}
+
+.dark-theme .skill-card-title {
+  color: #f6e9d2;
+}
+
+.dark-theme .skill-card-note {
+  color: rgba(246, 233, 210, 0.4);
+  border-bottom-color: rgba(246, 233, 210, 0.06);
+}
+
+.dark-theme .skill-tag {
+  color: rgba(246, 233, 210, 0.55);
+  background: rgba(246, 233, 210, 0.06);
+}
+
+/* ── Contact — keep dark, all beige text ──────────────── */
+.dark-theme .contact {
+  background-color: #12090A;
+}
+
+.dark-theme .contact-label {
+  color: #C0272D !important;
+}
+
+.dark-theme .contact-heading {
+  color: #f6e9d2;
+}
+
+.dark-theme .contact-heading em {
+  color: #C0272D;
+}
+
+.dark-theme .contact-link-icon {
+  color: #C0272D;
+}
+
+.dark-theme .contact-link-row:hover .contact-link-display {
+  color: #f6e9d2;
+}
+
+/* ── Projects heading ─────────────────────────────────── */
+.dark-theme .projects-heading {
+  color: #f6e9d2;
+}
+
+/* ── Mobile overrides ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .cs-hero-content {
+    padding: 0 6vw !important;
+  }
+
+  .dark-theme .about-education {
+    border-left: none;
+    border-top-color: rgba(246, 233, 210, 0.12);
+  }
+}
+
+
+/* ── Custom Scrollbar ─────────────────────────────────── */
+.dark-theme ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+  background: rgba(14, 10, 11, 0.5);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: rgba(246, 233, 210, 0.3);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: rgba(246, 233, 210, 0.5);
+}
+
+/* Firefox scrollbar */
+.dark-theme {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(246, 233, 210, 0.3) rgba(14, 10, 11, 0.5);
+}

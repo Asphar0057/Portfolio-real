@@ -5,7 +5,6 @@ const roles = [
   { label: 'Graphic Designer', color: '#C0272D' },
   { label: 'Web Developer',    color: '#12090A' },
   { label: 'Product Designer', color: '#7B2420' },
-  { label: 'Coder',            color: '#4A3F35' },
 ]
 
 export default function Hero() {

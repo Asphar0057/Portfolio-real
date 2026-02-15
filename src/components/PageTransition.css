@@ -1,0 +1,48 @@
+/* ── Slide overlay ───────────────────────────────────── */
+.slide-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.slide-overlay.slide-right-enter {
+  background: #0e0a0b;
+  transform: translateX(100%);
+}
+
+.slide-overlay.slide-right-enter.active {
+  transform: translateX(0);
+}
+
+.slide-overlay.slide-right-exit {
+  background: #0e0a0b;
+  transform: translateX(0);
+}
+
+.slide-overlay.slide-right-exit:not(.active) {
+  transform: translateX(-100%);
+}
+
+.slide-overlay.slide-left-enter {
+  background: #fbf4de;
+  transform: translateX(-100%);
+}
+
+.slide-overlay.slide-left-enter.active {
+  transform: translateX(0);
+}
+
+.slide-overlay.slide-left-exit {
+  background: #fbf4de;
+  transform: translateX(0);
+}
+
+.slide-overlay.slide-left-exit:not(.active) {
+  transform: translateX(100%);
+}

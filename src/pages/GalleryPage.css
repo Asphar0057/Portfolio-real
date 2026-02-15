@@ -1,7 +1,7 @@
 /* ── Gallery Page Shell ──────────────────────────────── */
 .gallery-page {
-  background-color: #0e0a0b;
-  color: #f6e9d2;
+  background-color: var(--beige);
+  color: var(--black);
   padding: 0 0 10vh;
 }
 
@@ -11,7 +11,7 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: end;
   padding: 5vh 7vw 7vh;
-  border-bottom: 1px solid rgba(246, 233, 210, 0.08);
+  border-bottom: 1px solid rgba(18, 9, 10, 0.08);
   gap: 2rem;
 }
 
@@ -20,7 +20,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(246, 233, 210, 0.45);
+  color: rgba(18, 9, 10, 0.4);
   text-decoration: none;
   transition: color 0.2s;
   align-self: start;
@@ -28,7 +28,7 @@
 }
 
 .gallery-back:hover {
-  color: rgba(246, 233, 210, 0.85);
+  color: var(--red);
 }
 
 .gallery-title-block {
@@ -36,7 +36,7 @@
 }
 
 .gallery-title-block .section-label {
-  color: #C0272D;
+  color: var(--red);
   margin-bottom: 1rem;
 }
 
@@ -45,7 +45,7 @@
   font-weight: 700;
   font-size: clamp(4rem, 9vw, 11rem);
   line-height: 0.9;
-  color: #f6e9d2;
+  color: var(--black);
   margin-bottom: 1.75rem;
 }
 
@@ -54,7 +54,7 @@
   font-size: clamp(0.8rem, 1vw, 0.95rem);
   font-weight: 300;
   line-height: 1.8;
-  color: rgba(246, 233, 210, 0.45);
+  color: rgba(18, 9, 10, 0.5);
   letter-spacing: 0.02em;
 }
 
@@ -63,7 +63,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(246, 233, 210, 0.25);
+  color: rgba(18, 9, 10, 0.3);
   text-align: right;
   align-self: start;
   padding-top: 0.25rem;
@@ -90,7 +90,7 @@
   display: block;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
               filter 0.4s ease;
-  filter: brightness(0.92);
+  filter: brightness(0.95);
 }
 
 .gallery-item:hover .gallery-img {

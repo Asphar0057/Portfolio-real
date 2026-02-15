@@ -1,0 +1,417 @@
+/* ── CS Projects — Bento Grid ──────────────────────────── */
+.cs-projects {
+  padding: 14vh 6vw;
+  background-color: var(--beige);
+}
+
+.cs-projects-header {
+  margin-bottom: 6vh;
+}
+
+.cs-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C0272D;
+  margin-bottom: 1.75rem;
+}
+
+.cs-projects-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1;
+  color: #f6e9d2;
+}
+
+/* ── Bento grid layout ────────────────────────────────── */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 0.75rem;
+}
+
+/* Card sizes */
+.bento-xlarge {
+  grid-column: span 4;
+  grid-row: span 2;
+  min-height: 450px;
+}
+
+.bento-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bento-medium {
+  grid-column: span 2;
+}
+
+.bento-small {
+  grid-column: span 1;
+}
+
+/* ── Card styles ──────────────────────────────────────── */
+.bento-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background: rgba(246, 233, 210, 0.04);
+  border: 1px solid rgba(246, 233, 210, 0.06);
+  transition: border-color 0.35s, background 0.35s, transform 0.35s;
+}
+
+.bento-card:hover {
+  border-color: rgba(246, 233, 210, 0.15);
+  background: rgba(246, 233, 210, 0.07);
+  transform: translateY(-2px);
+}
+
+/* Top row — period + link */
+.bento-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.bento-period {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C0272D;
+}
+
+.bento-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #C0272D;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(192, 39, 45, 0.3);
+  transition: all 0.2s;
+}
+
+.bento-link:hover {
+  color: #f6e9d2;
+  background: #C0272D;
+  border-color: #C0272D;
+}
+
+/* Body */
+.bento-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bento-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: #f6e9d2;
+  line-height: 1.1;
+}
+
+.bento-xlarge .bento-title {
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.bento-large .bento-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+}
+
+.bento-xlarge .bento-desc {
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  line-height: 1.8;
+  max-width: 95%;
+}
+
+.bento-xlarge .bento-body {
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.bento-xlarge .bento-tags {
+  gap: 0.5rem;
+}
+
+.bento-xlarge .bento-tag {
+  font-size: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(192, 39, 45, 0.1);
+  border-color: rgba(192, 39, 45, 0.2);
+}
+
+.bento-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(246, 233, 210, 0.4);
+}
+
+.bento-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.82rem, 0.95vw, 0.95rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(246, 233, 210, 0.55);
+  margin-top: 0.5rem;
+  white-space: pre-line;
+}
+
+/* Tags */
+.bento-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.bento-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #C0272D;
+  background: rgba(192, 39, 45, 0.08);
+  padding: 0.25rem 0.55rem;
+  border: 1px solid rgba(192, 39, 45, 0.15);
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-xlarge {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .bento-large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .bento-small {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-projects {
+    padding: 10vh 5vw;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-xlarge,
+  .bento-large,
+  .bento-medium,
+  .bento-small {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .bento-card {
+    padding: 1.5rem;
+  }
+}
+
+
+/* ── CS Experience — Timeline ──────────────────────────── */
+.cs-experience {
+  padding: 14vh 6vw;
+  background-color: var(--beige);
+}
+
+.cs-experience-header {
+  margin-bottom: 6vh;
+}
+
+.cs-experience-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1;
+  color: #f6e9d2;
+}
+
+/* ── Timeline ──────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 3rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(246, 233, 210, 0.1),
+    rgba(246, 233, 210, 0.3),
+    rgba(246, 233, 210, 0.1)
+  );
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.timeline-item::before {
+  content: '›';
+  position: absolute;
+  left: -2.5rem;
+  top: 2.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(246, 233, 210, 0.4);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+  color: rgba(246, 233, 210, 0.7);
+  transform: translateX(5px);
+}
+
+.timeline-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.timeline-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-content {
+  background: rgba(246, 233, 210, 0.04);
+  border: 1px solid rgba(246, 233, 210, 0.06);
+  padding: 2.5rem;
+  transition: all 0.35s ease;
+  border-radius: 4px;
+}
+
+.timeline-content:hover {
+  background: rgba(246, 233, 210, 0.07);
+  border-color: rgba(246, 233, 210, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+.timeline-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  color: #f6e9d2;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(246, 233, 210, 0.4);
+}
+
+.timeline-period {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C0272D;
+  white-space: nowrap;
+}
+
+.timeline-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(246, 233, 210, 0.55);
+}
+
+/* ── Responsive Timeline ──────────────────────────────── */
+@media (max-width: 768px) {
+  .cs-experience {
+    padding: 10vh 5vw;
+  }
+
+  .timeline {
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: -2rem;
+    top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-period {
+    white-space: normal;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+}
