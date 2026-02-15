@@ -1,0 +1,242 @@
+.about {
+  padding: 14vh 8vw;
+  background-color: var(--beige);
+}
+
+/* Header */
+.about-header {
+  margin-bottom: 7vh;
+}
+
+.about-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(2.8rem, 5vw, 6rem);
+  line-height: 1.06;
+  color: var(--black);
+  margin-top: 0.5rem;
+}
+
+.about-heading em {
+  color: var(--red);
+  font-style: italic;
+}
+
+/* Bio + Education row */
+.about-body {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 8vw;
+  align-items: start;
+  margin-bottom: 10vh;
+}
+
+.about-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.about-para {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(18, 9, 10, 0.65);
+  max-width: 60ch;
+}
+
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid var(--red);
+  padding-bottom: 0.3rem;
+  width: fit-content;
+  transition: opacity 0.2s;
+}
+
+.about-cta:hover {
+  opacity: 0.6;
+}
+
+.about-cta span {
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.about-cta:hover span {
+  transform: translateX(4px);
+}
+
+/* Education */
+.about-education {
+  border-left: 1px solid rgba(192, 39, 45, 0.25);
+  padding-left: 2.5rem;
+}
+
+.edu-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 2rem;
+}
+
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(18, 9, 10, 0.08);
+}
+
+.edu-item:first-of-type {
+  padding-top: 0;
+}
+
+.edu-degree {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  color: var(--black);
+  line-height: 1.2;
+}
+
+.edu-school {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(18, 9, 10, 0.6);
+  letter-spacing: 0.02em;
+}
+
+.edu-honors {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--red);
+  opacity: 0.75;
+}
+
+.edu-status {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(18, 9, 10, 0.4);
+  margin-top: 0.2rem;
+}
+
+.edu-status.active {
+  color: var(--red);
+}
+
+/* Skills section */
+.skills-section {
+  border-top: 1px solid rgba(18, 9, 10, 0.1);
+  padding-top: 6vh;
+}
+
+.skills-eyebrow {
+  margin-bottom: 4vh !important;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 10vh 5vw;
+  }
+
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 4vh;
+  }
+
+  .about-education {
+    border-left: none;
+    border-top: 1px solid rgba(192, 39, 45, 0.25);
+    padding-left: 0;
+    padding-top: 3vh;
+  }
+
+  .about-heading {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 2rem;
+  border: 1px solid rgba(18, 9, 10, 0.08);
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.skill-card:hover {
+  border-color: rgba(192, 39, 45, 0.3);
+  transform: translateY(-3px);
+}
+
+.skill-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+  color: var(--black);
+  line-height: 1.1;
+}
+
+.skill-card-note {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.55;
+  color: rgba(18, 9, 10, 0.5);
+  border-bottom: 1px solid rgba(18, 9, 10, 0.07);
+  padding-bottom: 0.9rem;
+}
+
+.skill-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--red);
+  background: rgba(192, 39, 45, 0.07);
+  padding: 0.3rem 0.6rem;
+}

@@ -1,0 +1,164 @@
+.projects {
+  padding: 8vh 8vw 8vh;
+  background-color: var(--beige);
+}
+
+.projects-header {
+  margin-bottom: 2.5vw;
+}
+
+.projects-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(3.5rem, 7vw, 9rem);
+  line-height: 0.95;
+  color: var(--black);
+  margin-top: 0.75rem;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* Card */
+.project-card {
+  aspect-ratio: 3 / 4;
+  background-color: var(--card-bg);
+  color: var(--card-color);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Subtle grain texture overlay */
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, var(--card-accent) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.card-id,
+.card-year {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  opacity: 0.45;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease;
+}
+
+.card-category {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Hover overlay */
+.card-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.card-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(242, 228, 196, 0.9);
+  margin-bottom: 1.5rem;
+  transform: translateY(12px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+}
+
+.card-view {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--beige);
+  opacity: 0.7;
+  transform: translateY(12px);
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.project-card:hover .card-hover-overlay {
+  opacity: 1;
+}
+
+.project-card:hover .card-desc,
+.project-card:hover .card-view {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 8vh 5vw;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .projects-heading {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: clamp(0.85rem, 3.2vw, 1.2rem);
+    white-space: nowrap;
+  }
+}
