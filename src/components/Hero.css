@@ -141,31 +141,31 @@
   .hero {
     height: auto;
     min-height: 100vh;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 10vh;
-    padding-bottom: 8vh;
+    padding-top: 0;
+    padding-bottom: 6vh;
   }
 
   .hero-portrait {
     position: relative;
     left: auto;
     bottom: auto;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    width: 68vw;
-    max-width: 320px;
-    object-position: center top;
-    margin: 0 auto 2.5vh;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top 25%;
     display: block;
   }
 
   .hero-content {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 3vh 6vw 0;
     margin-top: 0;
     text-align: center;
     width: 100%;
-    padding: 0 6vw;
   }
 
   .hero-names {
@@ -173,28 +173,28 @@
   }
 
   .hero-name {
-    font-size: 17vw;
-    white-space: normal;
+    font-size: 11vw;
+    white-space: nowrap;
   }
 
   .hero-roles {
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
   }
 
   .hero-role {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
   }
 
   .hero-role-sep {
-    margin: 0 0.6rem;
+    margin: 0 0.5rem;
   }
 
   .hero-footer {
     position: relative;
     bottom: auto;
     right: auto;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 }
