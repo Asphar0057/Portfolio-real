@@ -24,8 +24,8 @@ export default function PostersPage() {
           <span className="section-label">Print & Layout</span>
           <h1 className="gallery-title">Poster Design</h1>
           <p className="gallery-subtitle">
-            Editorial, cultural, and conceptual poster work — each frame<br />
-            a conversation between type, image, and silence.
+            Editorial, cultural, and conceptual poster work with each frame<br />
+            being a conversation between type, image, and silence.
           </p>
         </div>
         <span className="gallery-count">{posters.length} pieces</span>

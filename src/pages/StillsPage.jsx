@@ -24,7 +24,7 @@ export default function StillsPage() {
           <span className="section-label">Personal Work</span>
           <h1 className="gallery-title">Experimental</h1>
           <p className="gallery-subtitle">
-            Personal projects, visual experiments, and creative exploration —<br />
+            Personal projects, visual experiments, and creative exploration<br />
             where there are no rules, only instinct.
           </p>
         </div>

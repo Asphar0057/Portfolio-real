@@ -24,7 +24,7 @@ export default function AdsPage() {
           <span className="section-label">Campaigns & Promos</span>
           <h1 className="gallery-title">Advertising Design</h1>
           <p className="gallery-subtitle">
-            Commercial visuals built for impact — product launches,<br />
+            Commercial visuals built for impact. Product launches,<br />
             brand awareness, and narratives that sell without shouting.
           </p>
         </div>

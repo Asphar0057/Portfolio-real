@@ -11,7 +11,7 @@ export default function InterfacesPage() {
           <span className="section-label">Sites & Interfaces</span>
           <h1 className="gallery-title">Web Design</h1>
           <p className="gallery-subtitle">
-            Full-stack builds and UI/UX projects — coming soon.
+            Full-stack builds and UI/UX projects coming soon.
           </p>
         </div>
         <span className="gallery-count" />
