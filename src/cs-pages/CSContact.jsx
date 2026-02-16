@@ -1,5 +1,5 @@
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdEmail, MdPhone } from 'react-icons/md'
 import '../components/Contact.css'
 
 const socials = [
@@ -10,16 +10,16 @@ const socials = [
     display: 'Parthavelangovan@gmail.com',
   },
   {
+    icon: MdPhone,
+    label: 'Phone',
+    href: 'tel:+12149404508',
+    display: '+1 214 940 4508',
+  },
+  {
     icon: FaGithub,
     label: 'GitHub',
     href: 'https://github.com/Asphar0057',
     display: 'Asphar0057',
-  },
-  {
-    icon: FaInstagram,
-    label: 'Instagram',
-    href: 'https://www.instagram.com/asphar_057/',
-    display: '@asphar_057',
   },
   {
     icon: FaLinkedin,

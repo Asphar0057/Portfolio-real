@@ -6,6 +6,10 @@ import e2 from '../assets/exp2.jpg'
 import e3 from '../assets/exp3.jpg'
 import e4 from '../assets/exp4.jpg'
 import e5 from '../assets/exp5.jpg'
+import e6 from '../assets/exp6.jpg'
+import e7 from '../assets/exp7.jpg'
+import e8 from '../assets/exp 8.jpg'
+import e9 from '../assets/exp 9.jpg'
 
 const items = [
   { src: e1, alt: 'Experimental 1' },
@@ -13,6 +17,10 @@ const items = [
   { src: e3, alt: 'Experimental 3' },
   { src: e4, alt: 'Experimental 4' },
   { src: e5, alt: 'Experimental 5' },
+  { src: e6, alt: 'Experimental 6' },
+  { src: e7, alt: 'Experimental 7' },
+  { src: e8, alt: 'Experimental 8' },
+  { src: e9, alt: 'Experimental 9' },
 ]
 
 export default function StillsPage() {

@@ -1,15 +1,21 @@
 import '../components/Hero.css'
 import './cs-theme.css'
+import profileImg from '../assets/Profile2.png'
 
 const roles = [
   { label: 'Software Engineer', color: '#C0272D' },
   { label: 'Full-Stack Developer', color: 'rgba(246, 233, 210, 0.6)' },
-  { label: 'Problem Solver', color: 'rgba(246, 233, 210, 0.35)' },
+  { label: 'AI-ML Engineer', color: 'rgba(246, 233, 210, 0.35)' },
 ]
 
 export default function CSHero() {
   return (
     <section id="hero" className="hero cs-hero">
+      <img
+        src={profileImg}
+        alt="Parthav Elangovan"
+        className="hero-portrait cs-portrait"
+      />
       <div className="hero-content cs-hero-content">
         <div className="hero-names">
           <h1 className="hero-name cs-name">PARTHAV</h1>

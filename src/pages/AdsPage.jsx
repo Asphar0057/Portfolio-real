@@ -6,6 +6,7 @@ import a2 from '../assets/Ad 2.png'
 import a3 from '../assets/AD 3.jpg'
 import a4 from '../assets/Ad 4.jpg'
 import a5 from '../assets/Ad 5.jpg'
+import a6 from '../assets/ad 6.jpg'
 
 const ads = [
   { src: a1, alt: 'Campaign 1' },
@@ -13,6 +14,7 @@ const ads = [
   { src: a3, alt: 'Campaign 3' },
   { src: a4, alt: 'Campaign 4' },
   { src: a5, alt: 'Campaign 5' },
+  { src: a6, alt: 'Campaign 6' },
 ]
 
 export default function AdsPage() {

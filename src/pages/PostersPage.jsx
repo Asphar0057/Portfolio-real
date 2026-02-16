@@ -6,6 +6,8 @@ import p2 from '../assets/Poster 2.jpg'
 import p3 from '../assets/Poster 3.jpg'
 import p4 from '../assets/Poster 4.jpg'
 import p5 from '../assets/Poster 5.jpg'
+import p6 from '../assets/poster 6.jpg'
+import p7 from '../assets/poster7.jpg'
 
 const posters = [
   { src: p1, alt: 'Poster 1' },
@@ -13,6 +15,8 @@ const posters = [
   { src: p3, alt: 'Poster 3' },
   { src: p4, alt: 'Poster 4' },
   { src: p5, alt: 'Poster 5' },
+  { src: p6, alt: 'Poster 6' },
+  { src: p7, alt: 'Poster 7' },
 ]
 
 export default function PostersPage() {
